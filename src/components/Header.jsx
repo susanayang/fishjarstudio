@@ -3,15 +3,20 @@ import { studio } from '../data/studio';
 export default function Header({ currentPage, onNavigate }) {
   return (
     <header className="site-header">
-      <div className="container header-inner">
+      <div className="header-banner">
         <button
-          className="brand"
+          className="brand-logo"
           type="button"
           onClick={() => onNavigate('about')}
+          aria-label={`${studio.name} home`}
         >
-          {studio.name}
+          <img
+            src="/fishjar_logo_cropped.png"
+            alt={studio.name}
+            className="brand-logo-image"
+          />
         </button>
-        <nav>
+        <nav className="header-nav">
           {studio.nav.map((item) => (
             <button
               key={item.id}
