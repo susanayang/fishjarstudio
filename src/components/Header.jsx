@@ -7,7 +7,7 @@ export default function Header({ currentPage, onNavigate }) {
         <button
           className="brand-logo"
           type="button"
-          onClick={() => onNavigate('about')}
+          onClick={() => onNavigate('home')}
           aria-label={`${studio.name} home`}
         >
           <img
@@ -20,7 +20,7 @@ export default function Header({ currentPage, onNavigate }) {
           {studio.nav.map((item) => (
             <button
               key={item.id}
-              className={`nav-link${currentPage === item.id ? ' active' : ''}`}
+              className="nav-link"
               type="button"
               onClick={() => onNavigate(item.id)}
             >
