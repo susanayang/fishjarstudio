@@ -2,7 +2,7 @@ export default function Home({ onNavigate }) {
   return (
     <>
       <div className="home-about-wrap">
-        <img src="/home_about.png" alt="About" className="home-page-image" />
+        <img src="/home_about.png" alt="About" className="home-about-image" />
         <div className="home-about-overlay">
           <h2 className="home-about-title">Who We Are</h2>
           <p className="home-about-body">
@@ -13,7 +13,7 @@ export default function Home({ onNavigate }) {
       </div>
 
       <div className="home-games-wrap">
-        <img src="/home_games.png" alt="Games" className="home-page-image" />
+        <img src="/home_games.png" alt="Games" className="home-games-image" />
         <div className="home-games-overlay">
           <h2 className="home-games-title">What We're Working On</h2>
           <p className="home-games-body">
@@ -24,7 +24,7 @@ export default function Home({ onNavigate }) {
       </div>
 
       <div className="home-services-wrap">
-        <img src="/home_services.png" alt="Services" className="home-page-image" />
+        <img src="/home_services.png" alt="Services" className="home-services-image" />
         <div className="home-services-overlay">
           <h2 className="home-services-title">What We Can Do</h2>
           <p className="home-services-body">

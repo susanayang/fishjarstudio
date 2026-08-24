@@ -151,18 +151,28 @@
   margin-right: calc(-50vw + 50%);
 }
 
-.home-page-image {
-  width: 100vw;
-  height: auto;
-  display: block;
-}
-
 .home-about-wrap {
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   line-height: 1;
   padding: 15vh 0;
+}
+
+@media (max-width: 768px) {
+  .home-about-wrap {
+    height: 100vh;
+    padding: 10vh 0 45vh 0;
+  }
+}
+
+.home-about-image {
+  width: 100vw;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .home-about-overlay {
@@ -179,6 +189,13 @@
   align-items: flex-end;
 }
 
+@media (max-width: 768px) {
+  .home-about-overlay {
+    left: 20%;
+    top: 30%;
+  }
+}
+
 .home-about-title {
   font-size: clamp(27px, 4.5vw, 80px);
   font-weight: 1000;
@@ -190,7 +207,7 @@
 }
 
 .home-about-body {
-  font-size: clamp(12px, 1.5vw, 60px);
+  font-size: clamp(15px, 1.5vw, 60px);
   color: #222;
   margin: clamp(18px, 2.25vw, 48px) 0 clamp(12px, 1.5vw, 24px);
   line-height: 1.7;
@@ -215,6 +232,22 @@
   line-height: 1;
 }
 
+@media (max-width: 768px) {
+  .home-games-wrap {
+    height: 100vh;
+    padding: 0 0 40vh 0;
+  }
+}
+
+.home-games-image {
+  width: 100vw;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+
 .home-games-overlay {
   position: absolute;
   top: 0;
@@ -229,6 +262,15 @@
   align-items: flex-start;
 }
 
+@media (max-width: 768px) {
+  .home-games-overlay {
+    right: 0;
+    top: 65%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
 .home-games-title {
   font-size: clamp(27px, 4.5vw, 80px);
   font-weight: 1000;
@@ -238,7 +280,7 @@
 }
 
 .home-games-body {
-  font-size: clamp(12px, 1.5vw, 60px);
+  font-size: clamp(15px, 1.5vw, 60px);
   color: #222;
   margin: clamp(18px, 2.25vw, 24px) 0;
   line-height: 1.7;
@@ -263,6 +305,23 @@
   padding: 15vh 0;
 }
 
+@media (max-width: 768px) {
+  .home-services-wrap {
+    height: 100vh;
+    padding: 0vh 0 36vh 0;
+    margin-top: 15vh;
+  }
+}
+
+.home-services-image {
+  width: 100vw;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  display: block;
+}
+
 .home-services-overlay {
   position: absolute;
   top: 0;
@@ -277,6 +336,15 @@
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .home-services-overlay {
+    top: 72%;
+    left: 0%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
 .home-services-title {
   font-size: clamp(27px, 4.5vw, 80px);
   font-weight: 1000;
@@ -286,7 +354,7 @@
 }
 
 .home-services-body {
-  font-size: clamp(12px, 1.5vw, 60px);
+  font-size: clamp(15px, 1.5vw, 60px);
   color: #222;
   margin: clamp(18px, 2.25vw, 48px) 0;
   line-height: 1.7;
@@ -308,8 +376,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: clamp(24px, 4vw, 64px);
-  padding: 0 0 20vh 0;
+  gap: clamp(36px, 2.5vw, 64px);
+  padding: 0 0 10vh 0;
+}
+
+@media (max-width: 768px) {
+  .home-page-links {
+    padding: 30vh 10vh 18vh 10vh;
+  }
 }
 
 .home-page-link {
@@ -317,14 +391,14 @@
 }
 
 .home-page-link-title {
-  font-size: clamp(21px, 4vw, 80px);
+  font-size: clamp(40px, 4vw, 80px);
   font-weight: 1000;
   margin: 0 0 4px;
   letter-spacing: 0.04em;
 }
 
 .home-page-link-subtitle {
-  font-size: clamp(14px, 2vw, 28px);
+  font-size: clamp(20px, 2vw, 28px);
   color: #444;
   margin: 0;
   letter-spacing: 0.03em;
@@ -339,7 +413,7 @@
 }
 
 .home-page-link-logo {
-  width: clamp(14px, 2.25vw, 28px);
+  width: clamp(20px, 2.25vw, 28px);
   height: auto;
   display: block;
 }
@@ -354,7 +428,9 @@
 
 .footer-banner-image {
   width: 100%;
-  height: auto;
+  height: 30vh;
+  object-fit: cover;
+  object-position: top;
   max-width: none;
   display: block;
   margin: 0;
