@@ -34,13 +34,26 @@ function HomeHero() {
   );
 }
 
+function AboutHero() {
+  return (
+    <div className="about-hero-wrap">
+      <img src="/about_hero.png" alt="About" className="about-hero-image" />
+      <div className="about-hero-gradient" />
+      <div className="about-hero-text">
+        <h1 className="about-hero-title">About Us</h1>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const PageComponent = PAGES[currentPage];
   const isHome = currentPage === 'home';
+  const isAbout = currentPage === 'about';
 
   return (
-    <Layout currentPage={currentPage} onNavigate={setCurrentPage} hero={isHome ? <HomeHero /> : null}>
+    <Layout currentPage={currentPage} onNavigate={setCurrentPage} hero={isHome ? <HomeHero /> : isAbout ? <AboutHero /> : null}>
       <PageComponent onNavigate={setCurrentPage} />
     </Layout>
   );

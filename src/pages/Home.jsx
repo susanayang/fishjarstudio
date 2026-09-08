@@ -33,20 +33,6 @@ export default function Home({ onNavigate }) {
           <button className="home-services-button" type="button" onClick={() => onNavigate('services')}>Learn More</button>
         </div>
       </div>
-
-      <div className="home-page-links">
-        <div className="home-page-link">
-          <h3 className="home-page-link-title">Contact Us</h3>
-          <p className="home-page-link-subtitle">yujie452106@gmail.com</p>
-        </div>
-        <div className="home-page-link">
-          <h3 className="home-page-link-title">Follow Us</h3>
-          <div className="home-page-link-social">
-            <img src="/xhs_logo.png" alt="" className="home-page-link-logo" />
-            <p className="home-page-link-subtitle">@天都的女儿</p>
-          </div>
-        </div>
-      </div>
     </>
   );
 }
